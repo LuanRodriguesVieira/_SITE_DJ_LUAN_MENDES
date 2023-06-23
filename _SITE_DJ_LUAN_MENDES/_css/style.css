@@ -1,0 +1,268 @@
+@charset "UTF-8";
+
+/* Animação de feixe de luz */
+@keyframes feixeDeLuz {
+  0% {
+    transform: scaleY(0) translateX(-50%);
+  }
+  25% {
+    transform: scaleY(1) translateX(0%);
+  }
+  75% {
+    transform: scaleY(1) translateX(100%);
+  }
+  100% {
+    transform: scaleY(0) translateX(50%);
+  }
+}
+
+/*borda dos quadros de fotos*/
+@keyframes glowing-border {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
+  }
+}
+
+/* Estilos gerais */
+body {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(189, 189, 189);
+}
+
+#interface {
+  position: relative;
+}
+
+/* Capa */
+img#capa {
+  position: sticky;
+  width: 102%;
+  margin: 0px;
+  padding: 0px;
+  opacity: 1;
+  box-shadow: -3px 2px 5px rgb(255, 0, 0);
+  z-index: 1;
+}
+
+img#capa02 {
+  position: absolute;
+  margin-top: -3px;
+  width: 102%;
+  padding: 0;
+  opacity: 0;
+  box-shadow: -3px -2px 5px rgb(255, 0, 0);
+  z-index: 2;
+}
+
+
+/* Menu */
+nav#menu ul {
+  color: white;
+  position: absolute;
+  display: block;
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  right: 570px;
+  z-index: 2;
+}
+
+nav#menu li {
+  display: inline-block;
+  padding: 5px;
+  margin: 2px;
+}
+
+h1#menut {
+  display: none;
+}
+
+/* Biografia */
+
+h1#titulo-biografia{
+  text-align: center;
+  font-size: 50px ;
+  margin: 0;
+  padding: 0;
+}
+article#biografia {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 80px;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(174, 174, 174));
+  margin-right: 350px;
+  box-shadow: 1px 1px 5px red;
+  z-index: 1;
+}
+
+article#biografia p {
+  text-align: center;
+  text-align: justify;
+  text-indent: 30px;
+}
+
+article#biografia h1 {
+  text-align: center;
+}
+
+article#biografia p strong{
+  color: rgb(0, 0, 0);
+  box-shadow: 1px 1px 10px black;
+}
+
+section img#djfoto01 {
+  position: absolute;
+  width: 30%;
+  margin-top: -390px;
+  margin-left: 1000px;
+  padding: 0;
+  display: block;
+  float: right;
+}
+
+/* Animação de feixe de luz */
+.feixe-de-luz {
+  margin: auto;
+  position: absolute;
+  top: 508px;
+  left: 0;
+  width: 51%;
+  height: 2px;
+  background-color: rgb(255, 55, 55);
+  opacity: 100%;
+  transform-origin: left center;
+  animation: feixeDeLuz 2s linear infinite;
+  z-index: 2;
+  filter: blur(2px);
+}
+
+/* area das fotos*/
+
+hgroup#titulo-fotos h1{
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  font-size: 50px;
+}
+
+hgroup#titulo-fotos h3{
+  margin-bottom: 50px;
+  padding: 0;
+  text-align: center;
+
+}
+
+article#album-fotos{
+  position: absolute;
+  margin: 0px auto;
+  margin-left: 150px;
+  padding: 50px;
+  top: 1000px;
+  overflow: hidden;
+}
+ul{
+  list-style: none;
+}
+
+article#album-fotos li{
+  float: left;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border: 5px solid #ffffff;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
+  animation: glowing-border 2s infinite;
+  -webkit-transition: all 0.4s ease-in; /*cria uma anoiomação de transação da imagem de zoom de acordo com o tempo determinado*/
+}
+
+ul#fotos li#foto01{
+  background: url("../_fotos/fotodj01.png");
+  background-position: 50% 50%; /*faz com que a imagem fica com zoom de 50% verticalmente e horizontalmente e apaeça o centro da imagem no quadro*/
+  background-size: 401px 431px; /*tamanho original da imagem*/
+  background-color: white;
+}
+
+ul#fotos li#foto01:hover{
+  background-position: 0px 0px; /*faz com que a imagem volte a posição normal*/
+  background-size: 200px 200px; /*faz com que a imagem tenha metade do seu tamanho original aparecendo por completo no quadro ao passar o mouse */
+}
+
+ul#fotos li#foto02{
+  background: url("../_fotos/fotodj02.png");
+  background-position: 50% 50%;
+  background-size: 400px 400px;
+  background-color: white;
+}
+
+ul#fotos li#foto02:hover{
+  background-position: 0px 0px; /*faz com que a imagem volte a posição normal*/
+  background-size: 200px 200px; /*faz com que a imagem tenha metade do seu tamanho original aparecendo por completo no quadro ao passar o mouse */
+}
+
+ul#fotos li#foto03{
+  background: url("../_fotos/fotodj03.png");
+  background-position: 50% 50%;
+  background-size: 400px 400px;
+  background-color: white;
+}
+
+ul#fotos li#foto03:hover{
+  background-position: 0px 0px; /*faz com que a imagem volte a posição normal*/
+  background-size: 200px 200px; /*faz com que a imagem tenha metade do seu tamanho original aparecendo por completo no quadro ao passar o mouse */
+}
+
+ul#fotos li#foto04{
+  background: url("../_fotos/fotodj04.png");
+  background-position: 50% 50%;
+  background-size: 400px 400px;
+  background-color: white;
+}
+
+ul#fotos li#foto04:hover{
+  background-position: 0px 0px; /*faz com que a imagem volte a posição normal*/
+  background-size: 200px 200px; /*faz com que a imagem tenha metade do seu tamanho original aparecendo por completo no quadro ao passar o mouse */
+}
+
+ul#fotos li:hover{
+  -webkit-transform: scale(1.5); /*faz com que ao passar o mouse a imagem amplie o seu tamanho*/
+}
+
+
+
+
+
+/*redes sociais*/
+header#redes-sociais{
+  position: absolute;
+  margin-top: 1600px;
+  margin-left: 300px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+header#redes-sociais h1{
+  font-size: 50px;
+  margin-bottom: 0;
+}
+
+/*rodape*/
+footer#rodape{
+  position: absolute;
+  margin-top: 2000px;
+  /*text-indent: 60px;*/
+  margin-left: 500px;
+}
