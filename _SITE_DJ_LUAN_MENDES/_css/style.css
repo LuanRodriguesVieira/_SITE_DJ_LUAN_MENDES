@@ -38,16 +38,16 @@ div#interface {
   box-shadow: 1px 1px 4px red;
 }
 
-img#capa{
+img#capa {
   display: flex;
   width: 100%;
 }
 
-img#capa02{
+img#capa02 {
   display: flex;
   position: fixed;
   width: 100% auto;
-  margin: 502px 0px 0px 10px;
+  margin: 500px 0px 0px 10px;
   padding: 0;
   box-shadow: 1px 1px 4px red;
   z-index: 9999;
@@ -73,7 +73,7 @@ nav#menu {
 
 nav#menu a {
   text-decoration: none;
-  color: white;
+  color: rgb(255, 145, 0);
   font-family: 'Caprasimo', cursive;
   font-weight: 400;
   font-size: 20px;
@@ -84,7 +84,11 @@ nav#menu a {
 }
 
 /*configuração-section biografia*/
-section#biografia{
+section#biografia {
+  flex-direction: row;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-flow: column wrap;
   width: 100%;
   text-align: center;
   bottom: 50px;
@@ -92,30 +96,37 @@ section#biografia{
   margin-bottom: 0;
 }
 
-section#biografia h1 strong{
+section#biografia h1 strong {
   display: flex;
+  flex-direction: row;
   text-align: center;
-  margin: 0px 0px 0px 630px;
+  flex-wrap: wrap;
+  flex-flow: column wrap;
+  width: 100%;
+  height: 100%;
   padding: 0;
   color: rgb(255, 255, 255);
   font-family: 'Pacifico', cursive;
   font-size: 40px;
 }
 
-section#biografia h2{
+section#biografia h2 {
   color: rgb(255, 255, 255);
   font-family: 'Caprasimo', cursive;
   font-size: 20px;
   margin-bottom: 25px;
-  
+  flex-direction: row;
+
 }
 
-section#biografia p{
+section#biografia p {
   display: flex;
+  flex-direction: row;
+  text-align: center;
+  flex-wrap: wrap;
+  text-align: justify;
   margin: 0;
-  width: 100% auto;
-  padding-left: 450px;
-  padding-right: 450px;
+  width: 100%;
   padding-top: 5px;
   color: white;
   top: 20px;
@@ -123,7 +134,11 @@ section#biografia p{
   text-align: justify;
 }
 
-article#conteudo-biografia{
+section#biografia p strong {
+  color: rgb(255, 145, 0);
+}
+
+article#conteudo-biografia {
   display: flex;
   flex-direction: column;
   margin-top: 50px;
@@ -133,17 +148,18 @@ article#conteudo-biografia{
   border: 0.4px solid red;
 }
 
-img#djfoto01{
+img#djfoto01 {
   display: flex;
+  justify-content: flex-end;
   position: absolute;
-  margin-left: 1000px;
-  width: 100% auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 /*configuração album de fotos*/
 
 /*redes sociais*/
-header#redes-sociais{
+header#redes-sociais {
   position: absolute;
   margin-top: 1600px;
   margin-left: 300px;
@@ -152,13 +168,13 @@ header#redes-sociais{
   color: white;
 }
 
-header#redes-sociais h1{
+header#redes-sociais h1 {
   font-size: 50px;
   margin-bottom: 0;
 }
 
 /*rodape*/
-footer#rodape{
+footer#rodape {
   position: absolute;
   margin-top: 2000px;
   /*text-indent: 60px;*/
@@ -166,47 +182,161 @@ footer#rodape{
   color: white;
 }
 
-@media screen and (max-width: 768px){
-  nav#menu a{
+/*respons*/
+@media screen and (max-width:1500px) {
+  article#conteudo-biografia {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: column wrap;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 50px;
+    padding-right: 200px;
+    padding-bottom: 50px;
+    gap: 5px;
+    border: 0.4px solid red;
+  }
+
+  section#biografia p {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    text-align: justify;
+    margin: 0;
     width: 100%;
-    font-size:8pt;
+    padding-top: 5px;
+    padding-left: 300px;
+    padding-right: 50px;
+    color: white;
+    top: 20px;
+    display: inline;
+    text-align: justify;
+  }
+
+  img#djfoto01 {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    margin-top: -370px;
+    padding: 0;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100% auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav#menu a {
+    width: 100%;
+    font-size: 8pt;
     padding: 0;
   }
 
-  img#capa{
+  img#capa {
     width: 100% auto;
     height: 100% auto;
   }
 
-  img#capa02{
+  img#capa02 {
     width: 100%;
     margin-top: 600px;
     margin-left: 0;
     opacity: 1;
   }
 
-  section#biografia{
-    width: 100%;
+  section#biografia {
+    width: 100% auto;
     text-align: center;
     bottom: 50px;
-    margin-top:150px;
+    margin-top: 240px;
     margin-bottom: 0;
   }
 
-  section#biografia h1 strong{
+  section#biografia h1 strong {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: column wrap;
     display: flex;
     text-align: center;
-    margin: 0px 0px 0px 180px;
+    width: 100% auto;
+    height: 100% auto;
     padding: 0;
     color: rgb(255, 255, 255);
     font-family: 'Pacifico', cursive;
     font-size: 30px;
   }
-  section#biografia h2{
+
+  section#biografia h2 {
     font-size: 15px;
   }
 
-  section#biografia p{
+  section#biografia p {
+    display: flex;
+    margin: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    font-size: 15px;
+    color: white;
+    top: 20px;
+    text-align: justify;
+    display: inline;
+    flex-direction: column;
+  }
+
+  img#djfoto01 {
+    position: absolute;
+    margin-top: -370px;
+    margin-left: 480px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  article#conteudo-biografia {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: column wrap;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 50px;
+    padding-right: 100px;
+    padding-bottom: 50px;
+    gap: 5px;
+    border: 0.4px s olid red;
+  }
+
+  section#biografia {
+    width: 100% auto;
+    bottom: 50px;
+    margin-top: 180px;
+    margin-bottom: 0;
+  }
+
+  section#biografia h1 strong {
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-flow: column wrap;
+    display: flex;
+    width: 100% auto;
+    height: 100% auto;
+    padding: 0;
+    color: rgb(255, 255, 255);
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+  }
+
+  section#biografia h2 {
+    font-size: 15px;
+  }
+
+  section#biografia p {
     display: flex;
     margin: 0;
     padding-left: 5px;
@@ -220,11 +350,77 @@ footer#rodape{
     flex-direction: column;
   }
 
-  img#djfoto01{
+  img#djfoto01 {
     display: flex;
     position: absolute;
-    margin-left: 90px;
-    margin-top: 250px;
-    width: 100% auto;
+    margin-left: 430px;
+    margin-top: -250px;
+    width: 30%;
 
+  }
+}
+
+@media screen and (max-width: 500px) {
+  article#conteudo-biografia {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: column wrap;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 50px;
+    padding-right: 100px;
+    padding-bottom: 50px;
+    gap: 5px;
+    border: 0.4px s olid red;
+  }
+
+  section#biografia {
+    width: 100% auto;
+    bottom: 50px;
+    margin-top: 180px;
+    margin-bottom: 0;
+  }
+
+  section#biografia h1 strong {
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-flow: column wrap;
+    display: flex;
+    width: 100% auto;
+    height: 100% auto;
+    padding: 0;
+    color: rgb(255, 255, 255);
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+  }
+
+  section#biografia h2 {
+    font-size: 15px;
+  }
+
+  section#biografia p {
+    display: flex;
+    margin: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    font-size: 12px;
+    color: white;
+    top: 20px;
+    text-align: justify;
+    display: inline;
+    flex-direction: column;
+  }
+
+  img#djfoto01 {
+    display: flex;
+    position: absolute;
+    margin-left: 350px;
+    margin-top: -250px;
+    padding: 0;
+    width: 30%;
+
+  }
 }
