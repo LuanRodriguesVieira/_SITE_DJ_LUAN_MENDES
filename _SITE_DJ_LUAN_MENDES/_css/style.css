@@ -27,10 +27,11 @@ div#interface {
 
 .container {
   display: flex;
+  justify-content: center;
   align-items: center;
   position: absolute;
   flex-direction: column;
-  width: 98.9% ;
+  width: 98.9%;
   margin-left: 12px;
   margin-right: 0px;
   z-index: 1;
@@ -47,6 +48,7 @@ img#capa {
 img#capa02 {
   display: flex;
   position: fixed;
+  align-items: stretch;
   margin: 0;
   left: 0.8%;
   width: 98.9%;
@@ -54,7 +56,7 @@ img#capa02 {
   padding: 0;
   box-shadow: 1px 1px 4px red;
   z-index: 9999;
-  opacity: 0;
+  opacity: 1;
 }
 
 /*configuração menu*/
@@ -63,8 +65,8 @@ nav#menu {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  width: 100% ;
-  height: 100% ;
+  width: 100%;
+  height: 100%;
   padding: 20px;
   margin: 0;
 }
@@ -94,6 +96,7 @@ section#biografia {
   display: flex;
   flex-wrap: wrap;
   flex-flow: column wrap;
+  align-items: center;
   max-width: 100%;
   max-height: 100%;
   margin-top: 35%;
@@ -104,7 +107,7 @@ article#conteudo-biografia {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 50px;
+  padding-bottom: 0 auto;
   margin-top: 3%;
   margin-left: 2%;
   margin-right: 2%;
@@ -153,6 +156,12 @@ section#biografia p strong {
   color: rgb(255, 145, 0);
 }
 
+section#biografia p#texto-f{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
 img#djfoto01 {
   display: flex;
   position: static;
@@ -184,7 +193,7 @@ hgroup#titulo-fotos {
 }
 
 hgroup h1#tfotos {
-  max-width: 100%;
+  max-width: 401px;
   max-height: 100%;
   font-family: 'Pacifico', cursive;
   font-size: 30pt;
@@ -197,7 +206,11 @@ hgroup h3#subt-fotos {
 
 ul#fotos {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
 }
 
 ul#fotos li#foto01 {
@@ -208,24 +221,23 @@ ul#fotos li#foto01 {
   margin: 10px;
   overflow: hidden;
   background-image: url("../_fotos/fotodj01.png");
+  background-repeat: no-repeat;
 }
-
 
 ul#fotos li#foto01:before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 100% auto;
-  height: 100% auto;
-  background-color: rgb(255, 0, 0);
-  /* ajuste a cor de sobreposição */
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 ul#fotos li#foto01:hover:before {
-  opacity: 1;
+  opacity: 0.4;
 }
 
 ul#fotos li#foto02 {
@@ -233,9 +245,10 @@ ul#fotos li#foto02 {
   position: relative;
   width: 401px;
   height: 431px;
-  margin: 10px;
+  margin: 0 auto;
   overflow: hidden;
   background-image: url("../_fotos/fotodj02.png");
+  background-repeat: no-repeat;
 }
 
 ul#fotos li#foto02:before {
@@ -245,47 +258,26 @@ ul#fotos li#foto02:before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(0, 0, 0);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 ul#fotos li#foto02:hover:before {
-  opacity: 1;
+  opacity: 0.4;
 }
 
-ul#fotos li#foto03 {
-  position: relative;
-  width: 401px;
-  height: 431px;
-  margin: 10px;
-  overflow: hidden;
-  background-image: url("../_fotos/fotodj03.png");
-}
 
-ul#fotos li#foto03:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(255, 0, 0);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-ul#fotos li#foto03:hover:before {
-  opacity: 1;
-}
 
 ul#fotos li#foto04 {
+  display: flex;
   position: relative;
   width: 401px;
   height: 431px;
   margin: 10px;
   overflow: hidden;
   background-image: url("../_fotos/fotodj04.png");
+  background-repeat: no-repeat;
 }
 
 ul#fotos li#foto04:before {
@@ -295,52 +287,67 @@ ul#fotos li#foto04:before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(0, 0, 0);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 ul#fotos li#foto04:hover:before {
-  opacity: 1;
+  opacity: 0.4;
 }
 
 /*redes sociais*/
 header#redes-sociais {
   display: flex;
+  position: relative;
   flex-direction: column;
+  justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
-  gap: 40px;
+  gap:40px;
   margin-top: 20%;
-  margin-bottom: 1%;
+  margin-bottom: 28%;
+  width: 100%;
+  height: 100%;
   color: white;
 }
 
 header#redes-sociais h1 {
   display: flex;
   font-size: 50px;
+  text-align: center;
   font-family: 'Pacifico', cursive;
 }
 
-div#icone-social{
+header#redes-sociais p {
   display: flex;
-  position: static;
-  max-width: 100%;
-  max-height: 100%;
-  margin-top: 0 auto;
-  padding-top: 0 auto;
-  margin-bottom: 0 auto;
-  margin-right: 0 auto;
-  margin-left: 0 auto;
-  gap: 30px;
-  transform: translate(-10%, -10%);
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+div#icone-social {
+  display: flex;
+  position: relative;
+  gap: 50px;
+  margin-top: 0;
+  padding: 0;
 }
 
 /*rodape*/
 footer#rodape {
-  position: absolute;
-  margin-top: 2000px;
-  /*text-indent: 60px;*/
-  margin-left: 500px;
-  color: white;
+  display: flex;
+  position: relative;
+  justify-content:center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 200px;
+  color: rgb(255, 145, 0);
+  z-index: 999999;
+}
+
+/*responsividade*/
+
+@media screen and (max-width: 360px) {
+
 }
