@@ -6,77 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DJ-LUAN-MENDES</title>
     <link rel="stylesheet" type="text/css" href="_css/style.css">
+    <script language="javascript" src="_JavaScript/JavaScript.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "DJ Luan Mendes",
+      "jobTitle": "DJ",
+      "birthPlace": "Brasília, DF",
+      "description": "Luan Rodrigues, conhecido como DJ Luan Mendes, é um DJ brasileiro que se destaca por suas mixagens criativas e improvisadas.",
+      "image": "_fotos/djfoto01.png",
+      "url": "https://seusite.com/dj-luan-mendes"
+    }
+    </script>
 </head>
-
-<script language="javascript" src="_JavaScript/JavaScript.js"></script>
 
 <body>
     <header>
-
         <div class="interface">
-
             <div class="feixe-de-luz"></div>
             <!--Foto da Capa-->
             <div class="container">
                 <!--feixe de luz na capa-->
-                <div><img id="capa" src="_fotos/CAPAex-biografia-html-css.png"></div>
-                <div><img id="capa02" src="_fotos/CAPA02-biografia-html-css.png" alt="Capa 02">
+                <div>
+                    <img id="capa" src="_fotos/CAPAex-biografia-html-css.png" alt="Capa">
                 </div>
-
+                <div>
+                    <img id="capa02" src="_fotos/CAPA02-biografia-html-css.png" alt="Capa 02">
+                </div>
             </div>
-
             <!--Menu flutuante-->
             <nav id="menu">
-
                 <h1 class="menut">Menu Principal</h1>
-
                 <div class="cabecalho-menu" type="1" start="1">
-
-                    <!--<li>Home</li>-->
                     <a class="cabecalho-menu-item" href="#biografia">Biografia</a>
                     <a class="cabecalho-menu-item" href="#tfotos">Fotos</a>
                     <a class="cabecalho-menu-item" href="#redes-sociais">Contatos</a>
-
                 </div>
+            </nav>
+        </div>
     </header>
-
 
     <!--Biografia do DJ Luan Mendes-->
     <main>
-        <section id="biografia">
-
+        <section id="biografia" itemscope itemtype="https://schema.org/Article">
             <h1><strong>Biografia</strong></h1>
-
-            <article id="conteudo-biografia">
-
+            <article id="conteudo-biografia" itemprop="articleBody">
                 <h2>Sobre Mim</h2>
-
-                <p>Luan Rodrigues conhecido como <strong>DJ LUAN MENDES</strong> nasceu em Brasília/DF.</p>
-
-                <p>Desde muito cedo teve como paixão a música.</p>
-
-                <p>Luan cresceu indo a igreja no qual pegou mais intimidade com a música,
-                    começando com o violão, depois guitarra e bateria.</p>
-
-                <p>Aos 14 anos teve contato pela primeira vez com toca disco (Vinil)
-                    e CDJ Profissional onde se encontrou de verdade no universo musical.</p>
-
-                <p>Após anos adquirindo conhecimento na area, DJ Luan Mendes começou
-                    a frequentar pequenos eventos como Promoter e logo viram o seu potencial
-                    como Deejay, e em pouco tempo se destacou em sua cidade por suas
-                    <strong>mixagens diferentes, criativas e improvisadas</strong> com ritmos ainda não tão
-                    escutados na época, e hoje ja está na profissão a 5 anos.
-                </p>
-
-                <p id="texto-f"><strong>“Não é só a música, mas sim toda a energia passada de um ser humano
-                        para outro através dela”</strong></p>
-                <img id="djfoto01" src="_fotos/djfoto01.png">
+                <p>Luan Rodrigues, conhecido como DJ LUAN MENDES, nasceu em Brasília/DF.</p>
+                <p>Desde muito cedo, teve paixão pela música.</p>
+                <p>Luan cresceu frequentando a igreja, o que o aproximou ainda mais da música. Ele começou com o violão,
+                    depois passou para a guitarra e bateria.</p>
+                <p>Aos 14 anos, teve seu primeiro contato com toca-discos (vinil) e CDJ profissional, onde encontrou sua
+                    verdadeira paixão no universo musical.</p>
+                <p>Após adquirir conhecimento na área, DJ Luan Mendes começou a frequentar pequenos eventos como
+                    promotor, e em pouco tempo seu potencial como DJ foi reconhecido. Ele se destacou em sua cidade por
+                    suas mixagens diferentes, criativas e improvisadas, com ritmos ainda não tão conhecidos na época.
+                    Atualmente, ele está na profissão há 5 anos.</p>
+                <p id="texto-f"><strong>“Não é só a música, mas sim toda a energia passada de um ser humano para outro
+                        através dela”</strong></p>
+                <img id="djfoto01" src="_fotos/djfoto01.png" alt="Foto do DJ Luan Mendes">
             </article>
-
         </section>
 
-        <section id="corpo-fotos">
-            <!--Area que contem algumas fotos-->
+        <section id="corpo-fotos" itemscope itemtype="https://schema.org/Photograph">
+            <!--Área que contém algumas fotos-->
             <article id="album-fotos">
                 <header>
                     <hgroup id="titulo-fotos">
@@ -92,29 +86,46 @@
             </article>
         </section>
 
-        <section>
+        <section class="player-wrapper" itemscope itemtype="https://schema.org/VideoObject">
+            <article>
+                <div>
+                    <h1><strong>Vídeo</strong></h1>
+                    <p>Escolhi esse trecho do vídeo que está completo no meu canal do YouTube (DJ Luan Mendes), onde
+                        contém um pequeno erro de mixagem. Usei a criatividade para transformar o erro em material para
+                        uma mixagem diferente da que eu havia programado.</p>
+                    <h3 itemprop="name"><strong>Mixagem Techouse DJ Luan Mendes</strong></h3>
+                </div>
+                <video id="my-video" controls>
+                    <source class="video-player" src="_video/my-video_480.mp4" type="video/mp4"
+                        media="(max-width: 480px)">
+                    <source class="video-player" src="_video/my-video_720.mp4" type="video/mp4"
+                        media="(max-width: 720px)">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
+            </article>
+        </section>
+
+        <section itemscope itemtype="https://schema.org/ContactPage">
             <article>
                 <header id="redes-sociais">
                     <h1>Redes Sociais</h1>
-                    <p>📲 <strong>Caso queiram conferir demonstrativos da apresentação, fazer orçamentos e contratações
-                            siga nossas redes sociais abaixo!</strong></p>
-
+                    <p>📲 <strong>Caso queiram conferir demonstrativos das minhas apresentações, fazer orçamentos e
+                            contratações, sigam minhas redes sociais abaixo!</strong></p>
                     <div id="icone-social">
                         <div>
-                            <img src="_fotos/Whatsapp.png" usemap="#meumapa">
+                            <img src="_fotos/Whatsapp.png" usemap="#meumapa" alt="Ícone do WhatsApp">
                             <map name="meumapa">
                                 <area shape="circle" coords="35,35,35"
-                                    href="https://api.whatsapp.com/send?phone=5561984326810" alt="whatsapp">
+                                    href="https://api.whatsapp.com/send?phone=5561984326810" alt="WhatsApp">
                             </map>
                         </div>
                         <div>
-                            <img src="_fotos/Instagram.png" usemap="#meumapa2">
+                            <img src="_fotos/Instagram.png" usemap="#meumapa2" alt="Ícone do Instagram">
                             <map name="meumapa2">
                                 <area shape="circle" coords="34,34,35" href="https://www.instagram.com/djluanmendes/"
-                                    alt="instagram">
+                                    alt="Instagram">
                             </map>
                         </div>
-
                     </div>
                 </header>
             </article>
