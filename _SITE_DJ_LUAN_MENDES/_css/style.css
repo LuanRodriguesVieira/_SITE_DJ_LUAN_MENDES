@@ -32,7 +32,7 @@ div#interface {
   position: absolute;
   flex-direction: column;
   width: 98.9%;
-  margin-left: 12px;
+  margin-left: 5px;
   margin-right: 0px;
   z-index: 1;
   box-shadow: 1px 1px 4px red;
@@ -42,7 +42,7 @@ img#capa {
   display: flex;
   width: 100%;
   height: 100%;
-  margin: 0;
+  margin: 1;
 }
 
 img#capa02 {
@@ -50,7 +50,7 @@ img#capa02 {
   position: fixed;
   align-items: stretch;
   margin: 0;
-  left: 0.8%;
+  left: 0.4%;
   width: 98.9%;
   height: 100%;
   padding: 0;
@@ -60,6 +60,7 @@ img#capa02 {
 }
 
 /*configuração menu*/
+
 nav#menu {
   display: flex;
   flex-direction: row;
@@ -69,6 +70,7 @@ nav#menu {
   height: 100%;
   padding: 20px;
   margin: 0;
+  opacity: 1;
 }
 
 .cabecalho-menu {
@@ -149,17 +151,18 @@ section#biografia p {
   padding-bottom: 0;
   color: white;
   display: inline;
-  font-size: 15pt;
+  font-size: 13pt;
 }
 
 section#biografia p strong {
   color: rgb(255, 145, 0);
 }
 
-section#biografia p#texto-f{
+section#biografia p#texto-f {
   text-align: center;
   margin-top: 50px;
   margin-bottom: 0;
+  font-size: 14pt;
 }
 
 img#djfoto01 {
@@ -304,7 +307,7 @@ header#redes-sociais {
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
-  gap:40px;
+  gap: 40px;
   margin-top: 20%;
   margin-bottom: 28%;
   width: 100%;
@@ -338,16 +341,298 @@ div#icone-social {
 footer#rodape {
   display: flex;
   position: relative;
-  justify-content:center;
+  justify-content: center;
   flex-wrap: wrap;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 10%;
+  margin-left: 0.4%;
+  margin-right: 0.5%;
+  margin-bottom: 1%;
   color: rgb(255, 145, 0);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid rgb(255, 0, 0);
+  border-bottom: 1px solid rgb(255, 0, 0);
   z-index: 999999;
 }
 
+/* seção do vídeo */
+.player-wrapper {
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  margin: 20%;
+  padding: 20px;
+  background-color: #000000;
+  box-shadow: 0 2px 8px rgb(255, 0, 0);
+}
+
+.player-wrapper h1 {
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  font-family: 'Pacifico', cursive;
+}
+
+.player-wrapper p {
+  font-size: 16px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.player-wrapper h3 {
+  font-size: 22px;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+}
+
+/* Estilos para o vídeo */
+video#my-video {
+  width: 100%;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb(255, 0, 0);
+}
+
+/* Estilos para os controles do vídeo */
+video#my-video::-webkit-media-controls {
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+video#my-video::-webkit-media-controls-start-playback-button {
+  display: initial;
+}
+
+video#my-video::-webkit-media-controls-volume-slider {
+  width: 100px;
+}
+
+video#my-video::-webkit-media-controls-mute-button {
+  margin-right: 10px;
+}
+
+/* Estilos para as fontes de legenda do vídeo */
+video#my-video::cue {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* Estilos para vídeos em dispositivos móveis */
+@media (max-width: 480px) {
+  .player-wrapper h1 {
+    font-size: 24px;
+  }
+
+  .player-wrapper p {
+    font-size: 14px;
+  }
+
+  .player-wrapper h3 {
+    font-size: 20px;
+  }
+}
+
+
+
 /*responsividade*/
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 1200px) {
+  ul#fotos {
+    margin-left: 0px;
+  }
 
+  ul#fotos li#foto01 {
+    margin-left: 10%;
+    margin-right: 0px;
+  }
+
+  img#capa02 {
+    margin-top: 15%;
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+  ul#fotos {
+    margin-left: 60px;
+  }
+
+  ul#fotos li#foto01 {
+    margin-left: 30px;
+    margin-right: 0px;
+  }
+
+}
+
+@media screen and (max-width: 912px) {
+  img#capa02 {
+    display: none;
+  }
+
+  ul#fotos li#foto01 {
+    margin-left: -30px;
+    margin-right: 0px;
+  }
+
+  ul#fotos li#foto04 {
+    margin-left: 0;
+    margin-right: 25px;
+  }
+
+  ul#fotos li#foto02 {
+    margin-right: 25px;
+  }
+
+}
+
+@media screen and (max-width: 871px) {
+  nav#menu a {
+    font-size: 15px;
+  }
+
+  img#capa02 {
+    display: none;
+  }
+
+  ul#fotos {
+    width: 80%;
+  }
+
+  ul#fotos li#foto01 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  ul#fotos li#foto04 {
+    margin-left: 0;
+    margin-right: 0px;
+  }
+
+  ul#fotos li#foto02 {
+    margin-right: 0px;
+    margin-left: 0;
+  }
+
+}
+
+@media screen and (max-width: 475px) {
+
+  nav#menu a {
+    display: none;
+  }
+
+  .container {
+    width: 98.0%;
+    margin-left: 5px;
+    margin-right: 0px;
+  }
+
+  img#capa02 {
+    display: none;
+  }
+
+  ul#fotos {
+    margin-right: 0;
+    margin-left: 10%;
+    padding-right: 1%;
+    padding-left: 0;
+  }
+
+  ul#fotos li#foto01 {
+    display: flex;
+    position: relative;
+    width: 401px;
+    height: 431px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  ul#fotos li#foto02 {
+    display: flex;
+    position: relative;
+    width: 401px;
+    height: 431px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  ul#fotos li#foto04 {
+    display: flex;
+    position: relative;
+    width: 401px;
+    height: 431px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  section#biografia p {
+    display: flex;
+    position: relative;
+    text-align: justify;
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 0.5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 0;
+    color: white;
+    display: inline;
+    font-size: 13pt;
+  }
+
+  img#djfoto01 {
+    width: 50%;
+    margin-left: 0%;
+    margin-top: 0%;
+
+  }
+
+  section#biografia p {
+    font-size: 11pt;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  img#capa02 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 415px) {
+
+
+
+  ul#fotos li#foto01 {
+    display: flex;
+    position: relative;
+    width: 301px;
+    height: 331px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  ul#fotos li#foto02 {
+    display: flex;
+    position: relative;
+    width: 301px;
+    height: 331px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  ul#fotos li#foto04 {
+    display: flex;
+    position: relative;
+    width: 301px;
+    height: 331px;
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
