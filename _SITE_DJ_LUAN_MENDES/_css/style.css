@@ -50,7 +50,7 @@ img#capa02 {
   position: fixed;
   align-items: stretch;
   margin: 0;
-  left: 0.4%;
+  left: 0.3%;
   width: 98.9%;
   height: 100%;
   padding: 0;
@@ -85,7 +85,7 @@ nav#menu a {
   color: rgb(255, 145, 0);
   font-family: 'Caprasimo', cursive;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 25px;
 
 }
 
@@ -115,6 +115,7 @@ article#conteudo-biografia {
   margin-right: 2%;
   gap: 5px;
   border: 0.4px solid red;
+  border-radius:1%;
 }
 
 section#biografia h1 strong {
@@ -225,6 +226,7 @@ ul#fotos li#foto01 {
   overflow: hidden;
   background-image: url("../_fotos/fotodj01.png");
   background-repeat: no-repeat;
+  border-radius: 5%;
 }
 
 ul#fotos li#foto01:before {
@@ -252,6 +254,7 @@ ul#fotos li#foto02 {
   overflow: hidden;
   background-image: url("../_fotos/fotodj02.png");
   background-repeat: no-repeat;
+  border-radius: 5%;
 }
 
 ul#fotos li#foto02:before {
@@ -281,6 +284,7 @@ ul#fotos li#foto04 {
   overflow: hidden;
   background-image: url("../_fotos/fotodj04.png");
   background-repeat: no-repeat;
+  border-radius: 5%;
 }
 
 ul#fotos li#foto04:before {
@@ -365,6 +369,7 @@ footer#rodape {
   padding: 20px;
   background-color: #000000;
   box-shadow: 0 2px 8px rgb(255, 0, 0);
+  border-radius:1%;
 }
 
 .player-wrapper h1 {
@@ -424,23 +429,6 @@ video#my-video::cue {
   padding: 2px 4px;
 }
 
-/* Estilos para vídeos em dispositivos móveis */
-@media (max-width: 480px) {
-  .player-wrapper h1 {
-    font-size: 24px;
-  }
-
-  .player-wrapper p {
-    font-size: 14px;
-  }
-
-  .player-wrapper h3 {
-    font-size: 20px;
-  }
-}
-
-
-
 /*responsividade*/
 
 @media screen and (max-width: 1200px) {
@@ -490,6 +478,10 @@ video#my-video::cue {
     margin-right: 25px;
   }
 
+  .player-wrapper {
+    margin: 5%;
+  }
+
 }
 
 @media screen and (max-width: 871px) {
@@ -522,8 +514,13 @@ video#my-video::cue {
 
 }
 
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 760px) {
+  img#capa02 {
+    display: none;
+  }
+}
 
+@media screen and (max-width: 475px) {
   nav#menu a {
     display: none;
   }
@@ -589,7 +586,7 @@ video#my-video::cue {
 
   img#djfoto01 {
     width: 50%;
-    margin-left: 0%;
+    margin-left: 7%;
     margin-top: 0%;
 
   }
@@ -599,16 +596,7 @@ video#my-video::cue {
   }
 }
 
-@media screen and (max-width: 760px) {
-  img#capa02 {
-    display: none;
-  }
-}
-
 @media screen and (max-width: 415px) {
-
-
-
   ul#fotos li#foto01 {
     display: flex;
     position: relative;
@@ -634,5 +622,9 @@ video#my-video::cue {
     height: 331px;
     margin-right: 0;
     margin-left: 0;
+  }
+
+  .player-wrapper h3 {
+    font-size: 15px;
   }
 }
